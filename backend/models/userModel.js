@@ -4,11 +4,11 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  verifyotp: { type: String, default: '' },
-  verifyotpExpireAt: { type: Number, default: 0 },
+  verifyOtp: { type: String, default: '' },
+  verifyOtpExpiresAt: { type: Number, default: 0 },
   isAccountVerified: { type: Boolean, default: false },
-  resetotp: { type: String, default: '' },
-  resetotpExpireAt: { type: Number, default: 0 }
+  resetOtp: { type: String, default: '' },
+  resetOtpExpiresAt: { type: Number, default: 0 }
 });
 
 const userModel = mongoose.models.user || mongoose.model('user', userSchema);
